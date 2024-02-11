@@ -1,0 +1,106 @@
+
+[{
+    "_id": {
+      "$oid": "65c830d2bc48c07dec596727"
+    },
+    "title": "The Lion King",
+    "language": "English",
+    "release_date": "24/06/1994",
+    "rating": "G",
+    "origin_country": "USA",
+    "production_company": "Walt Disney Animation Studios",
+    "budget": "$45000000",
+    "runtime": "01:28:00"
+  },
+  {
+    "_id": {
+      "$oid": "65c834e7bc48c07dec596728"
+    },
+    "title": "Toy Story",
+    "language": "English",
+    "release_date": "22/11/1995",
+    "rating": "G",
+    "origin_country": "USA",
+    "production_company": "Pixar Animation Studios",
+    "budget": "$30000000",
+    "runtime": "01:21:00"
+  },
+  {
+    "_id": {
+      "$oid": "65c83575bc48c07dec596729"
+    },
+    "title": "Finding Nemo",
+    "language": "English",
+    "release_date": "30/03/2003",
+    "rating": "G",
+    "origin_country": "USA",
+    "production_company": "Pixar Animation Studios",
+    "budget": "$94000000",
+    "runtime": "01:40:00"
+  }]
+
+
+  [{
+    "_id": {
+      "$oid": "65c835d5bc48c07dec59672a"
+    },
+    "genre": "Horror"
+  },
+  {
+    "_id": {
+      "$oid": "65c83600bc48c07dec59672b"
+    },
+    "genre": "Thriller"
+  },
+  {
+    "_id": {
+      "$oid": "65c8360fbc48c07dec59672c"
+    },
+    "genre": "Action"
+  },
+  {
+    "_id": {
+      "$oid": "65c8361cbc48c07dec59672d"
+    },
+    "genre": "Drama"
+  },
+  {
+    "_id": {
+      "$oid": "65c8362ebc48c07dec59672e"
+    },
+    "genre": "Romance"
+  },
+  {
+    "_id": {
+      "$oid": "65c83637bc48c07dec59672f"
+    },
+    "genre": "Comedy"
+  },
+  {
+    "_id": {
+      "$oid": "65c83645bc48c07dec596730"
+    },
+    "genre": "Animation"
+  }]
+
+  [{
+    "_id": {
+      "$oid": "65c83677bc48c07dec596731"
+    },
+    "first_name": "Roger",
+    "last_name": "Allers"
+  },
+  {
+    "_id": {
+      "$oid": "65c836b9bc48c07dec596732"
+    },
+    "first_name": "John",
+    "last_name": "Lasseter"
+  },
+  {
+    "_id": {
+      "$oid": "65c836e7bc48c07dec596733"
+    },
+    "first_name": "Andrew",
+    "last_name": "Stanton"
+  }]
