@@ -11,6 +11,16 @@
     "https"
   ],
   "paths": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/movies/": {
       "get": {
         "description": "",
@@ -366,6 +376,9 @@
               "type": "object",
               "properties": {
                 "first_name": {
+                  "example": "any"
+                },
+                "last_name": {
                   "example": "any"
                 }
               }

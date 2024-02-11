@@ -58,7 +58,7 @@ const updateDirector = async (req, res, next) => {
     const userId = new ObjectId(req.params.id);
     const director = {
       first_name: req.body.first_name,
-      last_name: req.body.first_name
+      last_name: req.body.last_name
     };
     const response = await mongodb
       .getDb()
