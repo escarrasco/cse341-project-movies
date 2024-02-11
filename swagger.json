@@ -5,7 +5,7 @@
     "description": "Movies API",
     "version": "1.0.0"
   },
-  "host": "cse341-node-se7c.onrender.com",
+  "host": "cse341-project-movies.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
