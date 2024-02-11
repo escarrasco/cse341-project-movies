@@ -1,70 +1,84 @@
-GET http://localhost:3000 HTTP/1.1
+//lesson 5 
+//GET ALL
 ###
-GET http://localhost:3000/moreNames HTTP/1.1
+GET http://localhost:3000/movies HTTP/1.1
+###
+GET http://localhost:3000/genres HTTP/1.1
+###
+GET http://localhost:3000/directors HTTP/1.1
 
+//GET BY ID
 ###
-GET https://cse341-node-se7c.onrender.com/ HTTP/1.1
+GET http://localhost:3000/movies/65ac70ea40e2de9d7356e090 HTTP/1.1
 ###
-GET https://cse341-node-se7c.onrender.com/moreNames HTTP/1.1
+GET http://localhost:3000/genres/65ac70ea40e2de9d7356e090 HTTP/1.1
+###
+GET http://localhost:3000/directors/65ac70ea40e2de9d7356e090 HTTP/1.1
 
-//lesson 2
+//POST NEW
 ###
-GET http://localhost:3000/contacts HTTP/1.1
-###
-GET http://localhost:3000/contacts/65ac70ea40e2de9d7356e090 HTTP/1.1
-
-###
-GET https://cse341-node-se7c.onrender.com/contacts HTTP/1.1
-###
-GET https://cse341-node-se7c.onrender.com/contacts/65ac70ea40e2de9d7356e090 HTTP/1.1
-
-//lesson 3
-###
-POST  http://localhost:3000/contacts HTTP/1.1
+POST  http://localhost:3000/movies HTTP/1.1
 content-type: application/json 
 
-{    
-    "firstName":"Dom",
-    "lastName":"Escobar",
-    "email":"dom.escobar@gmail.com",
-    "favoriteColor":"purple",
-    "birthday":"08/12/2004"
+{
+    "title": "The Lion King",
+    "language": "English",
+    "release_date": "24/06/1994",
+    "rating": "G",
+    "origin_country": "USA",
+    "production_company": "Walt Disney Animation Studios",
+    "budget": "$45000000",
+    "runtime": "01:28:00"
 }
-### 
-PUT http://localhost:3000/contacts/65b842e29047ecab96bff884 HTTP/1.1 
-content-type: application/json
-
-{  
-    "firstName":"Dom",
-    "lastName":"Carrasco", 
-    "email":"dom.escobar@gmail.com",
-    "favoriteColor":"yellow",
-    "birthday":"08/12/2004" 
-}
-### 
-DELETE http://localhost:3000/contacts/65b842e29047ecab96bff884 HTTP/1.1
-
 ###
-POST  https://cse341-node-se7c.onrender.com/contacts HTTP/1.1
+POST  http://localhost:3000/genres HTTP/1.1
 content-type: application/json 
 
-{    
-    "firstName":"Dom",
-    "lastName":"Escobar",
-    "email":"dom.escobar@gmail.com",
-    "favoriteColor":"purple",
-    "birthday":"08/12/2004"
+{
+    "genre": "Comedy"
 }
-###  change the id everytime you test it
-PUT https://cse341-node-se7c.onrender.com/contacts/65b84b625da34c4414bc65db HTTP/1.1 
+###
+POST  http://localhost:3000/directors HTTP/1.1
+content-type: application/json 
+
+{
+    "first_name": "Andrew",
+    "last_name": "Stanton"
+}
+
+
+//PUT update
+### 
+PUT http://localhost:3000/movies/65b842e29047ecab96bff884 HTTP/1.1 
 content-type: application/json
 
-{  
-    "firstName":"Dom",
-    "lastName":"Carrasco", 
-    "email":"dom.escobar@gmail.com",
-    "favoriteColor":"yellow",
-    "birthday":"08/12/2004" 
+{
+    "title": "The Lion King",
+    "language": "Spanish",
+    "release_date": "24/06/1994",
+    "rating": "G",
+    "origin_country": "USA",
+    "production_company": "Walt Disney Animation Studios",
+    "budget": "$45000000",
+    "runtime": "01:28:00"
 }
-### change the id everytime you test it
-DELETE https://cse341-node-se7c.onrender.com/contacts/65b84b625da34c4414bc65db HTTP/1.1
+### 
+PUT http://localhost:3000/genres/65b842e29047ecab96bff884 HTTP/1.1 
+content-type: application/json
+
+{
+    "genre": "Comedy"
+}
+### 
+PUT http://localhost:3000/directors/65b842e29047ecab96bff884 HTTP/1.1 
+content-type: application/json
+
+{
+    "first_name": "Andrew",
+    "last_name": "Stanton"
+}
+
+//delete
+### 
+DELETE http://localhost:3000/movies/65b842e29047ecab96bff884 HTTP/1.1
+
