@@ -25,7 +25,7 @@ content-type: application/json
     "language": "English",
     "release_date": "24/06/1994",
     "rating": "G",
-    "origin_country": "USA",
+    "origen_country": "USA",
     "production_company": "Walt Disney Animation Studios",
     "budget": "$45000000",
     "runtime": "01:28:00"
@@ -57,7 +57,7 @@ content-type: application/json
     "language": "Spanish",
     "release_date": "24/06/1994",
     "rating": "G",
-    "origin_country": "USA",
+    "origen_country": "USA",
     "production_company": "Walt Disney Animation Studios",
     "budget": "$45000000",
     "runtime": "01:28:00"
@@ -109,7 +109,7 @@ content-type: application/json
     "language": "English",
     "release_date": "24/06/1994",
     "rating": "G",
-    "origin_country": "USA",
+    "origen_country": "USA",
     "production_company": "Walt Disney Animation Studios",
     "budget": "$45000000",
     "runtime": "01:28:00"
@@ -141,7 +141,7 @@ content-type: application/json
     "language": "Spanish",
     "release_date": "24/06/1994",
     "rating": "G",
-    "origin_country": "USA",
+    "origen_country": "USA",
     "production_company": "Walt Disney Animation Studios",
     "budget": "$45000000",
     "runtime": "01:28:00"
