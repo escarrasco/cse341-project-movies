@@ -9,7 +9,7 @@ GET http://localhost:3000/directors HTTP/1.1
 
 //GET BY ID
 ###
-GET http://localhost:3000/movies/65c830d2bc48c07dec596727 HTTP/1.1
+GET http://localhost:3000/movies/65c830d2bc48c0.7dec596727 HTTP/1.1
 ###
 GET http://localhost:3000/genres/65c835d5bc48c07dec59672a HTTP/1.1
 ###
