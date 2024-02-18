@@ -5,10 +5,8 @@ const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const mongodb = require('./db/connect');
 
-
 var app = express();
 const port = process.env.PORT || 3000
-
 
 app
     .use(bodyParser.json())
@@ -21,12 +19,11 @@ app
       })
     .use('/', require('./routes'));
 
-// lesson 1
-/*app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});*/
+    
+process.on('uncaughtException', (err, origin) => {
+    console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
+});
 
-// lesson 2
 // mongo connection
 mongodb.initDb( (err, mongodb) => {
     if (err){

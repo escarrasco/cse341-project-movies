@@ -1,4 +1,4 @@
-//lesson 5  localhost
+//localhost
 //GET ALL
 ###
 GET http://localhost:3000/movies HTTP/1.1
@@ -9,11 +9,11 @@ GET http://localhost:3000/directors HTTP/1.1
 
 //GET BY ID
 ###
-GET http://localhost:3000/movies/65ac70ea40e2de9d7356e090 HTTP/1.1
+GET http://localhost:3000/movies/65c830d2bc48c07dec596727 HTTP/1.1
 ###
-GET http://localhost:3000/genres/65ac70ea40e2de9d7356e090 HTTP/1.1
+GET http://localhost:3000/genres/65c835d5bc48c07dec59672a HTTP/1.1
 ###
-GET http://localhost:3000/directors/65ac70ea40e2de9d7356e090 HTTP/1.1
+GET http://localhost:3000/directors/65c83677bc48c07dec596731 HTTP/1.1
 
 //POST NEW
 ###
@@ -21,13 +21,13 @@ POST  http://localhost:3000/movies HTTP/1.1
 content-type: application/json 
 
 {
-    "title": "The Lion King",
+    "title": "The Lion King II",
     "language": "English",
-    "release_date": "24/06/1994",
+    "release_date": "1994-06-24",
     "rating": "G",
     "origen_country": "USA",
     "production_company": "Walt Disney Animation Studios",
-    "budget": "$45000000",
+    "budget": "$20,000,000",
     "runtime": "01:28:00"
 }
 ###
@@ -35,15 +35,15 @@ POST  http://localhost:3000/genres HTTP/1.1
 content-type: application/json 
 
 {
-    "genre": "Comedy"
+    "genre": "Documentary"
 }
 ###
 POST  http://localhost:3000/directors HTTP/1.1
 content-type: application/json 
 
 {
-    "first_name": "Andrew",
-    "last_name": "Stanton"
+    "first_name": "John",
+    "last_name": "Doe"
 }
 
 
@@ -53,13 +53,13 @@ PUT http://localhost:3000/movies/65b842e29047ecab96bff884 HTTP/1.1
 content-type: application/json
 
 {
-    "title": "The Lion King",
+    "title": "The Lion King II",
     "language": "Spanish",
-    "release_date": "24/06/1994",
+    "release_date": "1994-06-24",
     "rating": "G",
     "origen_country": "USA",
     "production_company": "Walt Disney Animation Studios",
-    "budget": "$45000000",
+    "budget": "$15,000,000",
     "runtime": "01:28:00"
 }
 ### 
@@ -67,15 +67,15 @@ PUT http://localhost:3000/genres/65b842e29047ecab96bff884 HTTP/1.1
 content-type: application/json
 
 {
-    "genre": "Comedy"
+    "genre": "Fiction"
 }
 ### 
 PUT http://localhost:3000/directors/65b842e29047ecab96bff884 HTTP/1.1 
 content-type: application/json
 
 {
-    "first_name": "Andrew",
-    "last_name": "Stanton"
+    "first_name": "Jane",
+    "last_name": "Doe"
 }
 
 //delete
@@ -105,13 +105,13 @@ POST  https://cse341-project-movies.onrender.com/movies HTTP/1.1
 content-type: application/json 
 
 {
-    "title": "The Lion King",
+    "title": "The Lion King II",
     "language": "English",
-    "release_date": "24/06/1994",
+    "release_date": "1994-06-24",
     "rating": "G",
     "origen_country": "USA",
     "production_company": "Walt Disney Animation Studios",
-    "budget": "$45000000",
+    "budget": "$20,000,000",
     "runtime": "01:28:00"
 }
 ###
@@ -119,15 +119,15 @@ POST  https://cse341-project-movies.onrender.com/genres HTTP/1.1
 content-type: application/json 
 
 {
-    "genre": "Comedy"
+    "genre": "Documentary"
 }
 ###
 POST  https://cse341-project-movies.onrender.com/directors HTTP/1.1
 content-type: application/json 
 
 {
-    "first_name": "Andrew",
-    "last_name": "Stanton"
+    "first_name": "John",
+    "last_name": "Doe"
 }
 
 
@@ -137,13 +137,13 @@ PUT https://cse341-project-movies.onrender.com/movies/65b842e29047ecab96bff884 H
 content-type: application/json
 
 {
-    "title": "The Lion King",
+    "title": "The Lion King II",
     "language": "Spanish",
-    "release_date": "24/06/1994",
+    "release_date": "1994-06-24",
     "rating": "G",
     "origen_country": "USA",
     "production_company": "Walt Disney Animation Studios",
-    "budget": "$45000000",
+    "budget": "$15,000,000",
     "runtime": "01:28:00"
 }
 ### 
@@ -151,15 +151,15 @@ PUT https://cse341-project-movies.onrender.com/genres/65b842e29047ecab96bff884 H
 content-type: application/json
 
 {
-    "genre": "Comedy"
+    "genre": "Fiction"
 }
 ### 
 PUT https://cse341-project-movies.onrender.com/directors/65b842e29047ecab96bff884 HTTP/1.1 
 content-type: application/json
 
 {
-    "first_name": "Andrew",
-    "last_name": "Stanton"
+    "first_name": "Jane",
+    "last_name": "Doe"
 }
 
 //delete
