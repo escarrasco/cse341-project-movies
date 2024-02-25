@@ -7,14 +7,14 @@ const validation = require('../middleware/validate');
 //auth0 lesson 7
 const { requiresAuth } = require('express-openid-connect');
 
-router.get('/', directorsController.getAll);
+router.get('/', requiresAuth(), directorsController.getAll);
 
-router.get('/:id', directorsController.getSingle);
+router.get('/:id', requiresAuth(), directorsController.getSingle);
 
-router.post('/', validation.saveDirector, directorsController.createDirector);
+router.post('/', requiresAuth(), validation.saveDirector, directorsController.createDirector);
 
-router.put('/:id', validation.saveDirector,  directorsController.updateDirector);
+router.put('/:id', requiresAuth(), validation.saveDirector,  directorsController.updateDirector);
 
-router.delete('/:id', directorsController.deleteDirector);
+router.delete('/:id', requiresAuth(), directorsController.deleteDirector);
 
 module.exports = router;

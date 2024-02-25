@@ -12,10 +12,10 @@ router.get('/', requiresAuth(), genresController.getAll);
 
 router.get('/:id', requiresAuth(), genresController.getSingle);
 
-router.post('/', validation.saveGenre, genresController.createGenre);
+router.post('/', requiresAuth(), validation.saveGenre, genresController.createGenre);
 
-router.put('/:id', validation.saveGenre, genresController.updateGenre);
+router.put('/:id', requiresAuth(), validation.saveGenre, genresController.updateGenre);
 
-router.delete('/:id', genresController.deleteGenre);
+router.delete('/:id', requiresAuth(), genresController.deleteGenre);
 
 module.exports = router;
