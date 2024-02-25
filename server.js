@@ -16,9 +16,13 @@ const config = {
   auth0Logout: true,
   secret: 'a long, randomly-generated string stored in env',
   baseURL: 'http://localhost:3000',
+  //baseURL: 'https://cse341-project-movies.onrender.com/',
   clientID: 'G3jSaMyD7MqX648YlUWIQ2cUw3zSYpi8',
   issuerBaseURL: 'https://dev-q42a6phacpqvxwbz.us.auth0.com'
 };
+//auth0
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(auth(config));
 
 app
     .use(bodyParser.json())
@@ -29,12 +33,14 @@ app
         res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Z-Key");
         next();
       })
+    .use(function (req, res, next) {
+        res.locals.user = req.oidc.user;
+        next();
+      })
     .use('/', require('./routes'));
 
 
-//auth0
-// auth router attaches /login, /logout, and /callback routes to the baseURL
-app.use(auth(config));
+
 
 //auth0
 // req.isAuthenticated is provided from the auth router
@@ -42,7 +48,9 @@ app.get('/', (req, res) => {
     res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
   }); 
 
-  
+
+
+
 process.on('uncaughtException', (err, origin) => {
     console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
 });
