@@ -4,15 +4,19 @@ const router = express.Router();
 const moviesController = require('../controllers/movies');
 //validator
 const validation = require('../middleware/validate');
+//auth0 lesson 7
+const { requiresAuth } = require('express-openid-connect');
 
-router.get('/', moviesController.getAll);
 
-router.get('/:id', moviesController.getSingle);
 
-router.post('/', validation.saveMovie, moviesController.createMovie);
+router.get('/', requiresAuth(), moviesController.getAll);
 
-router.put('/:id', validation.saveMovie, moviesController.updateMovie);
+router.get('/:id', requiresAuth(), moviesController.getSingle);
 
-router.delete('/:id', moviesController.deleteMovie);
+router.post('/', requiresAuth(), validation.saveMovie, moviesController.createMovie);
+
+router.put('/:id', requiresAuth(), validation.saveMovie, moviesController.updateMovie);
+
+router.delete('/:id', requiresAuth(), moviesController.deleteMovie);
 
 module.exports = router;

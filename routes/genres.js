@@ -5,9 +5,12 @@ const genresController = require('../controllers/genres');
 //validator
 const validation = require('../middleware/validate');
 
-router.get('/', genresController.getAll);
+//auth0 lesson 7
+const { requiresAuth } = require('express-openid-connect');
 
-router.get('/:id', genresController.getSingle);
+router.get('/', requiresAuth(), genresController.getAll);
+
+router.get('/:id', requiresAuth(), genresController.getSingle);
 
 router.post('/', validation.saveGenre, genresController.createGenre);
 

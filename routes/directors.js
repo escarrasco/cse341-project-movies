@@ -4,6 +4,8 @@ const router = express.Router();
 const directorsController = require('../controllers/directors');
 //validator
 const validation = require('../middleware/validate');
+//auth0 lesson 7
+const { requiresAuth } = require('express-openid-connect');
 
 router.get('/', directorsController.getAll);
 
