@@ -17,7 +17,7 @@ const config = {
   secret: 'a long, randomly-generated string stored in env',
   //baseURL: 'http://localhost:3000',
   baseURL: 'https://cse341-project-movies.onrender.com/',
-  clientID: 'G3jSaMyD7MqX648YlUWIQ2cUw3zSYpi8',
+  clientID: process.env.AUTH0_CLIENT,
   issuerBaseURL: 'https://dev-q42a6phacpqvxwbz.us.auth0.com'
 };
 //auth0
