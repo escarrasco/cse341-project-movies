@@ -15,8 +15,8 @@ const config = {
   authRequired: false,
   auth0Logout: true,
   secret: 'a long, randomly-generated string stored in env',
-  baseURL: 'http://localhost:3000',
-  //baseURL: 'https://cse341-project-movies.onrender.com/',
+  //baseURL: 'http://localhost:3000',
+  baseURL: 'https://cse341-project-movies.onrender.com/',
   clientID: 'G3jSaMyD7MqX648YlUWIQ2cUw3zSYpi8',
   issuerBaseURL: 'https://dev-q42a6phacpqvxwbz.us.auth0.com'
 };
