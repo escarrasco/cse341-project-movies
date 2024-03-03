@@ -37,8 +37,9 @@ const getSingle = async (req, res, next) => {
 const createAward = async (req, res, next) => {
   try{
     const award = {
-      first_name: req.body.first_name,
-      last_name: req.body.last_name
+      title: req.body.title,
+      country: req.body.country,
+      first_awarded: req.body.first_awarded
     };
     const response = await mongodb.getDb().db().collection('awards').insertOne(award);
     if (response.acknowledged) {
@@ -57,8 +58,9 @@ const updateAward = async (req, res, next) => {
   try{
     const userId = new ObjectId(req.params.id);
     const award = {
-      first_name: req.body.first_name,
-      last_name: req.body.last_name
+      title: req.body.title,
+      country: req.body.country,
+      first_awarded: req.body.first_awarded
     };
     const response = await mongodb
       .getDb()

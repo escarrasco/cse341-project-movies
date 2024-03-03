@@ -11,16 +11,6 @@
     "https"
   ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/movies/": {
       "get": {
         "description": "",
@@ -456,10 +446,13 @@
             "schema": {
               "type": "object",
               "properties": {
-                "first_name": {
+                "title": {
                   "example": "any"
                 },
-                "last_name": {
+                "country": {
+                  "example": "any"
+                },
+                "first_awarded": {
                   "example": "any"
                 }
               }
@@ -517,10 +510,13 @@
             "schema": {
               "type": "object",
               "properties": {
-                "first_name": {
+                "title": {
                   "example": "any"
                 },
-                "last_name": {
+                "country": {
+                  "example": "any"
+                },
+                "first_awarded": {
                   "example": "any"
                 }
               }
