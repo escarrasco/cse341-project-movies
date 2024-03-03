@@ -55,7 +55,7 @@ content-type: application/json
 {
     "title": "British Academy Film Awards",
     "country": "United Kingdom",
-    "first_awarded": "29/05/1949"
+    "first_awarded": "1949-05-29"
 }
 
 //PUT update
@@ -96,7 +96,7 @@ content-type: application/json
 {
     "title": "British Academy Film Awards",
     "country": "US",
-    "first_awarded": "02/11/1949"
+    "first_awarded": "1949-11-02"
 }
 
 //delete
@@ -168,7 +168,7 @@ content-type: application/json
 {
     "title": "British Academy Film Awards",
     "country": "United Kingdom",
-    "first_awarded": "29/05/1949"
+    "first_awarded": "1949-05-29"
 }
 
 //PUT update
@@ -208,7 +208,7 @@ content-type: application/json
 {
     "title": "British Academy Film Awards",
     "country": "US",
-    "first_awarded": "02/11/1949"
+    "first_awarded": "1949-11-02"
 }
 
 //delete
