@@ -16,6 +16,8 @@ routes.use('/movies', require('./movies'));
 routes.use('/genres', require('./genres'));
 //directors route
 routes.use('/directors', require('./directors'));
+//awards route
+routes.use('/awards', require('./awards'));
 
 
 module.exports = routes;

@@ -104,3 +104,28 @@
     "first_name": "Andrew",
     "last_name": "Stanton"
   }]
+
+  [{
+    "_id": {
+      "$oid": "65e3f8bd82355e18e559da34"
+    },
+    "title": "Academy Awards",
+    "country": "US",
+    "first_awarded": "16/05/1929"
+  },
+  {
+    "_id": {
+      "$oid": "65e3f8d982355e18e559da35"
+    },
+    "title": "Golden Globe Awards",
+    "country": "US",
+    "first_awarded": "20/01/1944"
+  },
+  {
+    "_id": {
+      "$oid": "65e3f8ee82355e18e559da36"
+    },
+    "title": "Screen Actors Guild Awards",
+    "country": "US",
+    "first_awarded": "25/02/1995"
+  }]

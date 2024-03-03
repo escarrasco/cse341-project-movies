@@ -66,9 +66,30 @@ const saveGenre = (req, res, next) => {
     });
   };
 
+//validate awards data
+const saveAward = (req, res, next) => {
+  const validationRule = {
+    title: ['required', 'regex:/^[a-zA-Z]+$/', 'min:2'],
+    country: ['required', 'regex:/^[a-zA-Z]+$/', 'min:2'],
+    first_awarded: 'required|date'
+  };
+  validator(req.body, validationRule, {}, (err, status) => {
+    if (!status) {
+      res.status(412).send({
+        success: false,
+        message: 'Validation failed',
+        data: err
+      });
+    } else {
+      next();
+    }
+  });
+};
+
 
 module.exports = {
   saveMovie,
   saveDirector,
-  saveGenre
+  saveGenre,
+  saveAward
 };
